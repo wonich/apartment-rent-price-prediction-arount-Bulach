@@ -23,6 +23,8 @@ The evaluation metrics are as follows:
 - **RMSE (out-of-sample):** 167.91  
 - **R² (out-of-sample):** 0.868
 
+![Out-of-sample prediction](images/OUTOFSAMPLESET_prediction.png)
+
 For more information please contact me at https://www.immolex.ch
 
 ## Usage
