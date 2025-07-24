@@ -19,9 +19,20 @@ Feel free to play around, share, give feedback, and use!
 
 This project uses machine learning to predict apartment rental prices in Bülach (Switzerland) based on various features such as size, number of rooms, amenities, and more. The model retrieves data via an API and provides users with an estimated rent price, confidence interval, and a graphical representation of the prediction.
 
+The alpha=0.5 Model was trained with LGBMRegressor on base of optuna parameters. The metrics are the follows:
+Amount of train-val datapoints: 14'560
+Amount of Out-Of-Sample datapoints: 1617
+MAE Out-Of-Sample: 116.1708
+RMSE Out-Of-Sample: 167.9133
+R2 Out-Of-Sample: 0.868
+
+![Out-of-sample prediction](images/OUTOFSAMPLESET_prediction.png)
+
+For more information please contact me at https://www.immolex.ch
+
 ## Usage
 ### for use with steamlit
-    Access the Link on Steamlit: https://apartment-rent-price-prediction-arount-bulach-ereqtgclelgmmyjk.streamlit.app/
+    Access the App on Steamlit: https://apartment-rent-price-prediction-arount-bulach-ereqtgclelgmmyjk.streamlit.app/
 
 ### for local use
 #### Requirements
