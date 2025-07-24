@@ -27,9 +27,9 @@ For more information please contact me at https://www.immolex.ch
 
 ## Usage
 ### for use with steamlit
-    Access the App on Steamlit: https://apartment-rent-price-prediction-arount-bulach-ereqtgclelgmmyjk.streamlit.app/
+Access the App on Steamlit: https://apartment-rent-price-prediction-arount-bulach-ereqtgclelgmmyjk.streamlit.app/
 
-### for local use
+### for local run (with API)
 #### Requirements
 
 - Python 3.x
