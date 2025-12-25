@@ -72,6 +72,7 @@ def app():
 
     # Prepare the data payload
     features = {
+        "room_class": 0,
         "sizeRoomsAdvert": size_rooms,
         "sizeSquareMeters": size_square_meters,
         "AppCountOfBuilding": app_count_building,
