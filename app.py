@@ -18,17 +18,25 @@ def get_rent_prediction(data):
     }
 
     try:
-        response = requests.post(url, json=payload, headers=headers)
-        
-        # Check if the response status is OK (200)
-        if response.status_code == 200:
-            return response.json()
-        else:
-            print(f"Error: Received status code {response.status_code}")
-            print(f"Response: {response.text}")
+        resp = requests.post(url, json=payload, headers=headers)
+
+        # Wichtig: erst Status prüfen, dann JSON "normal" verarbeiten
+        if resp.status_code != 200:
+            # FastAPI liefert meist {"detail": "..."} zurück
+            try:
+                err = resp.json()
+                detail = err.get("detail", resp.text)
+            except ValueError:
+                detail = resp.text
+
+            st.error(f"API Error {resp.status_code}: {detail}")
             return None
+
+        # 2xx: OK
+        return resp.json()
+
     except requests.exceptions.RequestException as e:
-        print(f"An error occurred while making the request: {e}")
+        st.error(f"Network/API request failed: {e}")
         return None
 
 # Streamlit App UI
